@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+  background: var(--bg, rgb(26, 80, 190));
+  font-size: 16px;
+}
+h1 {
+  font-family: Pp Neue Machina, sans-serif;
+  font-size: 3rem;
+  padding: 2rem;
+}
+.img-wrapper {
+  max-width: 600px;
+  padding: 0 1rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+.img-wrapper img {
+  width: 100%;
+}
+button {
+  font-size: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 8rem 0;
+}
+
+/* Hero */
+
+@font-face {
+  font-family: "Pp Neue Machina";
+  src: url("../fonts/PPNeueMachina_\ Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Pp Neue Machina";
+  src: url("../fonts/PP\ Neue\ Machina\ Inktrap\ Medium.woff") format("woff");
+  font-weight: 600;
+}
+
+.section .container {
+  opacity: var(--opacity);
+  will-change: opacity;
+}
+
+.f-24 {
+  font-variation-settings: "wght" 500;
+  letter-spacing: 0.02em;
+  font-size: max(24px, min(1.67rem, 28px));
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3.19rem;
+  padding-right: 3.19rem;
+}
+
+.container.is--full {
+  max-width: none;
+}
+
+.hero__rows--parent {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__rows {
+  --scale: 1;
+  position: relative;
+  width: 100vw;
+  left: calc(46 / var(--to-rem) * -1);
+  transform: translate3D(0, calc(var(--row) / 2 / var(--vh) * 100vh), 0);
+  scale: var(--scale);
+}
+
+.hero__row {
+  align-items: center;
+  display: flex;
+}
+
+.hero__row {
+  --translate: 0;
+  --translate-y: 0vh;
+  translate: var(--translate) var(--translate-y);
+}
+
+.hero__line {
+  grid-column-gap: 2.01rem;
+  grid-row-gap: 2.01rem;
+  flex: none;
+  align-items: center;
+  padding-left: 2.78rem;
+  display: flex;
+}
+
+.f-74 {
+  letter-spacing: -0.04em;
+  font-family: Pp Neue Machina, sans-serif;
+  font-size: 5.14rem;
+  line-height: 1;
+}
+
+.hero__circle {
+  border-radius: 100vw;
+  width: 2.64rem;
+  height: 2.64rem;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero__circle img {
+  scale: 1.08;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
